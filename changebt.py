@@ -15,7 +15,7 @@ def changebt(bts):
             bd['info'][i]=''
         try:
             for i in ['comment','comment.utf-8']:
-                bd['info'][i]=''
+                bd[i]=''
         except:
             pass
         for i in ['name','name.utf-8']:
