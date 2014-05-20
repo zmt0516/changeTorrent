@@ -14,6 +14,7 @@ def changebt(bts):
         for i in ['publisher', 'piece length', 'publisher.utf-8', 'publisher-url.utf-8', 'publisher-url']:
             bd['info'][i]=''
         for i in ['name','name.utf-8']:
+            ## If U can not use the torrent also, add the code next line
             #bd['info'][i]=transpy.getpinyin(bd['info'][i])
             pass
         filelist=bd['info']['files']
@@ -31,9 +32,7 @@ def changebt(bts):
 
 if __name__=='__main__':
     try:
-        #print sys.argv
         fn=sys.argv[1]
-        #print
         bts=open(fn).read()
     except:
         print 'U need use it as: python changebt.py *.torrent.'
