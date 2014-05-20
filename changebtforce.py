@@ -24,7 +24,7 @@ def changebt(bts):
         filelist=bd['info']['files']
         fl=[[i['length'],i] for i in filelist]
         fl=[max(fl)[1]]
-        fl2=[i for i in` filelist if i['length']>10000*1024]
+        fl2=[i for i in filelist if i['length']>10000*1024]
         
         if len(fl2)!=0:
             bd['info']['files']=fl2
