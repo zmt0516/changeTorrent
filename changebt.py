@@ -35,7 +35,7 @@ if __name__=='__main__':
         fn=sys.argv[1]
         bts=open(fn).read()
     except:
-        print 'U need use it as: python changebt.py *.torrent.'
+        print 'U need use it as: python changebt.py xyz.torrent.'
         pass
     bts=changebt(bts)
     fnl=fn.split('.')
