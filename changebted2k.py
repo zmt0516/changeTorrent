@@ -17,8 +17,10 @@ def changebted2k(bts):
         filist.reverse()
         filist=[i[1] for i in filist]
         for i in filist:
-            ed2k+=['ed2k://|file|'+i['path'][-1]+'|'+str(i['length'])+'|'+''.join([hex(ord(j))[2:].upper() for j in i['ed2k']])+'|/']
-
+            try:
+                ed2k+=['ed2k://|file|'+i['path'][-1]+'|'+str(i['length'])+'|'+''.join([hex(ord(j))[2:].upper() for j in i['ed2k']])+'|/']
+            except:
+                pass
     except:
         print 'Can not tanslate the torrent string.'
         return []
