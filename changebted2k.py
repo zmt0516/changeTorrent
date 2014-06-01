@@ -18,7 +18,7 @@ def changebted2k(bts):
         filist=[i[1] for i in filist]
         for i in filist:
             try:
-                ed2k+=['ed2k://|file|'+i['path'][-1]+'|'+str(i['length'])+'|'+''.join([hex(ord(j))[2:].upper() for j in i['ed2k']])+'|/']
+                ed2k+=['ed2k://|file|'+i['path'][-1]+'|'+str(i['length'])+'|'+''.join([ ('%02X'% ord(j)) for j in i['ed2k']])+'|/']
             except:
                 pass
     except:
